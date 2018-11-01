@@ -16,6 +16,13 @@
 
 package com.example.android.teatime;
 
+import android.support.test.rule.ActivityTestRule;
+import android.support.test.runner.AndroidJUnit4;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
 /**
  * This test demos a user clicking on a GridView item in MenuActivity which opens up the
  * corresponding OrderActivity.
@@ -27,15 +34,17 @@ package com.example.android.teatime;
 
 
 // TODO (1) Add annotation to specify AndroidJUnitRunner class as the default test runner
+@RunWith(AndroidJUnit4.class)
 public class MenuActivityScreenTest {
 
     // TODO (2) Add the rule that provides functional testing of a single activity
-
+    @Rule public ActivityTestRule<MenuActivity> mMenuActivityActivityTestRule = new ActivityTestRule<>(MenuActivity.class);
     // TODO (3) Finish writing this test which will click on a gridView Tea item and verify that
     // the OrderActivity opens up with the correct tea name displayed.
-
+    @Test
     public void clickGridViewItem_OpensOrderActivity() {
-
+        //1
+        onData(allOf)
     }
 
 }
